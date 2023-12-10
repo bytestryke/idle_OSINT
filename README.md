@@ -1,6 +1,6 @@
 # idle_OSINT
 
-Just an OSINT automaton tool. The goal is to make an easy-to-use GUI to aid in investigations. This is a very early work in progress as I learn a new framework.
+Just an OSINT automaton tool. The goal is to make an easy-to-use GUI to aid SOC analysts in cybersecurity investigations. This is a very early work in progress as I learn a new framework.
 
 Lots of existing tools are all CLI-based and require you to install dependencies. I want something that is cross-platform and plug-and-play.
 
