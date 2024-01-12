@@ -18,9 +18,11 @@ class Config:
 
         cls.shodan_api_key = cls.config.get('APIKeys', 'shodan_api_key', fallback='')
         cls.virus_total_api_key = cls.config.get('APIKeys', 'virus_total_api_key', fallback='')
+        cls.censys_api_key = cls.config.get('APIKeys', 'censys_api_key', fallback='')
+        cls.alienvault_otx_api_key = cls.config.get('APIKeys', 'alienvault_otx_api_key', fallback='')
 
     @classmethod
-    def set_api_keys(cls, shodan_api_key, virus_total_api_key):
+    def set_api_keys(cls, shodan_api_key, virus_total_api_key, censys_api_key, alienvault_otx_api_key):
         current_config = configparser.ConfigParser()
         current_config.read('config.ini')
 
@@ -34,5 +36,15 @@ class Config:
             cls.config.set('APIKeys', 'virus_total_api_key', virus_total_api_key)
         else:
             cls.config.set('APIKeys', 'virus_total_api_key', current_config.get('APIKeys', 'virus_total_api_key', fallback=''))
+
+        if censys_api_key:
+            cls.config.set('APIKeys', 'censys_api_key', censys_api_key)
+        else:
+            cls.config.set('APIKeys', 'censys_api_key', current_config.get('APIKeys', 'censys_api_key', fallback=''))
+
+        if alienvault_otx_api_key:
+            cls.config.set('APIKeys', 'alienvault_otx_api_key', alienvault_otx_api_key)
+        else:
+            cls.config.set('APIKeys', 'alienvault_otx_api_key', current_config.get('APIKeys', 'alienvault_otx_api_key', fallback=''))
 
         cls.save()

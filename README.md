@@ -8,7 +8,6 @@ Lots of existing tools are all CLI-based and require you to install dependencies
 
 ### A. UI/UX Changes
 - Add checkbox functionality
-- Add ability to use personal API keys
 - Change sizing
 - Add autopopulating map for IP location
 
@@ -18,7 +17,6 @@ Lots of existing tools are all CLI-based and require you to install dependencies
 - DNSDumpster
 - OPSWAT MetaDefender
 - Whois
-- Tor
 - VirusTotal
 - AlienVault OTX
 - General Threat IP lists (maybe from Maxmind/SANS/etc)
